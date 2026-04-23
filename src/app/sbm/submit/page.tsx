@@ -43,10 +43,10 @@ export default function SubmitBookmarkPage() {
 
     if (!user) {
       toast({
-        title: 'Sign in required',
-        description: 'Please sign in to submit a bookmark.',
+        title: 'Submit unavailable',
+        description: 'Bookmark submission requires an active session.',
       })
-      router.push('/login')
+      router.push('/')
       return
     }
 

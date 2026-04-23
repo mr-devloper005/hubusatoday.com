@@ -215,10 +215,10 @@ export default function CreateTaskPage() {
   const handleSubmit = () => {
     if (!user) {
       toast({
-        title: "Sign in required",
-        description: "Please sign in before creating content.",
+        title: "Create flow unavailable",
+        description: "Creating content from this page requires an active session.",
       });
-      router.push("/login");
+      router.push("/");
       return;
     }
 
