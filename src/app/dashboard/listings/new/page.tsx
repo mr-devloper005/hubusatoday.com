@@ -121,10 +121,10 @@ export default function NewListingPage() {
   const buildListing = (): Listing | null => {
     if (!user) {
       toast({
-        title: "Sign in required",
-        description: "Please sign in to submit a listing.",
+        title: "Editor unavailable",
+        description: "The listing editor is not available without an active session.",
       })
-      router.push("/login")
+      router.push("/")
       return null
     }
     if (!name.trim() || !description.trim() || !category || !address.trim() || !city.trim()) {

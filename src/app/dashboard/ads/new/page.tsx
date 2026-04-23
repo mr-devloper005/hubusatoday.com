@@ -111,10 +111,10 @@ export default function NewAdPage() {
   const buildAd = (): ClassifiedAd | null => {
     if (!user) {
       toast({
-        title: "Sign in required",
-        description: "Please sign in to publish an ad.",
+        title: "Editor unavailable",
+        description: "The ad editor is not available without an active session.",
       })
-      router.push("/login")
+      router.push("/")
       return null
     }
 

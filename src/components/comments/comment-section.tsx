@@ -86,11 +86,10 @@ export function CommentSection({ comments }: CommentSectionProps) {
             </div>
           </div>
         ) : (
-          <div className="text-center py-6">
-            <p className="text-muted-foreground mb-4">Sign in to join the conversation</p>
-            <Button asChild>
-              <a href="/login">Sign In</a>
-            </Button>
+          <div className="py-6 text-center">
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              This site publishes guest and editorial posts without reader accounts. Comments are read-only here.
+            </p>
           </div>
         )}
       </div>
