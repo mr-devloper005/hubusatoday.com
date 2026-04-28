@@ -97,10 +97,10 @@ export default function NewArticlePage() {
   const buildArticle = (status: Article['status']): Article | null => {
     if (!user) {
       toast({
-        title: "Sign in required",
-        description: "Please sign in to create an article.",
+        title: "Editor unavailable",
+        description: "The article editor is not available without an active session.",
       })
-      router.push("/login")
+      router.push("/")
       return null
     }
     if (!title.trim() || !excerpt.trim() || !content.trim()) {
